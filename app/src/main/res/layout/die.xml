@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<se.nielstrom.dice.app.DieView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    class="se.nielstrom.dice.app.DieView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/die"
+    android:minHeight="20dp"
+    android:minWidth="20dp"
+    android:background="#fffffe9f"
+    android:focusable="true">
+
+    <se.nielstrom.dice.app.FontFitTextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textStyle="bold"
+        android:text="-1"
+        android:gravity="center"
+        android:id="@+id/nr_of_sides"
+        android:textSize="20dp"
+        android:textColor="#ff000000" />
+
+    </se.nielstrom.dice.app.DieView>
