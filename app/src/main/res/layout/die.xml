@@ -17,7 +17,7 @@
         android:textStyle="bold"
         android:text="-1"
         android:gravity="center"
-        android:id="@+id/nr_of_sides"
+        android:id="@+id/current_side"
         android:textSize="20dp"
         android:textColor="#ff000000" />
 

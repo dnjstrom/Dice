@@ -2,7 +2,6 @@ package se.nielstrom.dice.app;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +25,13 @@ public class DiceGridAdapter extends BaseAdapter {
 
         inflater = LayoutInflater.from(context);
 
+        dice.add(new Die(2, Color.LTGRAY));
         dice.add(new Die(4, Color.YELLOW));
+        dice.add(new Die(6, Color.GREEN));
+        dice.add(new Die(10, Color.RED));
         dice.add(new Die(12, Color.CYAN));
-        dice.add(new Die(20, Color.MAGENTA));
+        dice.add(new Die(20, Color.BLUE));
+        dice.add(new Die(100, Color.WHITE));
     }
 
     @Override
@@ -48,20 +51,8 @@ public class DiceGridAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        final View dieView = inflater.inflate(R.layout.die, viewGroup, false);
-        final Die die = dice.get(i);
-        dieView.setBackgroundColor(die.getColor());
-        TextView text = (TextView) dieView.findViewById(R.id.nr_of_sides);
-        text.setText(die.getCurrentSide() + "");
-
-        dieView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TextView text = (TextView) dieView.findViewById(R.id.nr_of_sides);
-                text.setText(die.roll() + "");
-            }
-        });
-
+        DieView dieView = (DieView) inflater.inflate(R.layout.die, viewGroup, false);
+        dieView.attachDie(dice.get(i));
         return dieView;
     }
 }
