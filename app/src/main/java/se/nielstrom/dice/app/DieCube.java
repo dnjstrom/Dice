@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.Random;
-
 import static android.view.MotionEvent.ACTION_CANCEL;
 import static android.view.MotionEvent.ACTION_DOWN;
 import static android.view.MotionEvent.ACTION_UP;
@@ -21,24 +19,24 @@ import static android.view.MotionEvent.ACTION_UP;
 /**
  * Created by Daniel on 2014-04-17.
  */
-public class DieView extends LinearLayout implements View.OnTouchListener {
+public class DieCube extends LinearLayout implements View.OnTouchListener {
 
     private Die die;
     private LayoutInflater inflater;
     private TextView tCurrentSide;
     private NumberScrambler scrambler;
 
-    public DieView(Context context) {
+    public DieCube(Context context) {
         super(context);
         init();
     }
 
-    public DieView(Context context, AttributeSet attrs) {
+    public DieCube(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public DieView(Context context, AttributeSet attrs, int defStyle) {
+    public DieCube(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }
@@ -52,7 +50,7 @@ public class DieView extends LinearLayout implements View.OnTouchListener {
         vText.setText(text);
     }
 
-    public DieView attachDie(Die die) {
+    public DieCube attachDie(Die die) {
         this.die = die;
 
         setBackgroundColor(die.getColor());

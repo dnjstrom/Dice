@@ -30,7 +30,7 @@ public class Die {
     public Die(int nrOfSides, int color) {
         this.nrOfSides = nrOfSides;
         this.color = color;
-        currentSide = 1;
+        currentSide = nrOfSides;
     }
 
 

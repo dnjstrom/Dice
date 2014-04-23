@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<se.nielstrom.dice.app.DieView
+<se.nielstrom.dice.app.DieCube
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    class="se.nielstrom.dice.app.DieView"
+    class="se.nielstrom.dice.app.DieCube"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/die"
     android:minHeight="20dp"
@@ -21,4 +21,4 @@
         android:textSize="20dp"
         android:textColor="#ff000000" />
 
-    </se.nielstrom.dice.app.DieView>
+    </se.nielstrom.dice.app.DieCube>

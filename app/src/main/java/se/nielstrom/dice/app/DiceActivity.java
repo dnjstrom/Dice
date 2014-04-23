@@ -6,18 +6,21 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.ListView;
+import android.widget.TableLayout;
 
-public class DiceGridActivity extends Activity {
+public class DiceActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dice_grid);
+        setContentView(R.layout.dice_list);
 
         LayoutInflater inflater = getLayoutInflater();
 
-        GridView grid = (GridView) findViewById(R.id.dice_grid);
-        grid.setAdapter(new DiceGridAdapter(this));
+        //GridView layout = (GridView) findViewById(R.id.dice_grid);
+        ListView layout = (ListView) findViewById(R.id.dice_list);
+        layout.setAdapter(new DiceAdapter(this));
     }
 
     @Override
